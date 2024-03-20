@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Management</title>
+    <link rel="icon" href="./img/managementIcon.jpg"/>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <section class="container">
+      <header class="topbar">
+        <a class="event">Events</a>
+        <a class="newBtn">+New</a>
+      </header>
+      <section class="template">
+        <aside class="sidebar">
+          <h2 class="list">List</h2>
+          <h2 class="form">Form</h2>
+        </aside>
+        <section class="mainContent">
+          
+          <form class="formData display">
+            <div class="element">
+              <label class="name" for="name">Name:</label>
+              <input type="text" name="title" id="name" width="" required/>
+            </div>
+
+            <div class="element">
+              <label class="description" for="description">Description:</label>
+              <textarea name="description" id="description" required></textarea>
+            </div>
+
+            <div class="element">
+              <label class="date" for="date">Date:</label>
+              <input type="datetime-local" name="date" id="date"  required/>
+            </div>
+
+            <div class="element footer">
+              <input type="reset" name="Cancel" id="Cancel" value="Cancel" />
+              <button type="submit" class="submit" value="Save/Add">
+              </button>
+            </div>
+          </form> 
+
+           <div class="items display">
+          </div> 
+
+
+      </section>
+    </section>
+
+
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
