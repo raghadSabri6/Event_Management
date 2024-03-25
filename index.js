@@ -26,8 +26,8 @@ let dateInput = document.getElementById("date");
 let descriptionInput = document.getElementById("description");
 let Cancel = document.getElementById("Cancel");
 
-items.classList.remove("display");
 populateItems();
+items.classList.remove("display");
 let mode = 'false';
 
 newData.onclick = function () {
@@ -65,7 +65,6 @@ newData.onclick = function () {
           icon: "success"
         });
         resetValues();
-        populateItems();
         window.location.reload;
       })
       .catch((error) => {
@@ -110,6 +109,7 @@ async function populateItems() {
   items.innerHTML = ''; // Clear existing items
   const eventsRef = collection(db, "events");
   const eventsSnapshot = await getDocs(eventsRef);
+  console.log(eventsSnapshot.docs);
 
   eventsSnapshot.forEach((doc) => {
     const eventData = doc.data();
